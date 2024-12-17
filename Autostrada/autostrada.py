@@ -44,12 +44,12 @@ def sectors(sec, rl):
     return length, damagedSectors, safeSectors
 
 for file in range(1, 5):
-    filename = "Tests/" + str(file) + ".in"
+    filename = "Autostrada/Tests/" + str(file) + ".in"
     roadLength, sec = computeInput(filename)
     roadDamagedLength, roadDamagedSectors, roadSafeSectors = sectors(sec, roadLength)
     roadWear = round((roadDamagedLength * 100 / roadLength))
 
-    filename = "Tests/" + str(file) + ".out"
+    filename = "Autostrada/Tests/" + str(file) + ".out"
     g = open(filename, "w")
     for sec in roadDamagedSectors:
         g.write("[{}, {}]\n".format(sec[0], sec[1]))
