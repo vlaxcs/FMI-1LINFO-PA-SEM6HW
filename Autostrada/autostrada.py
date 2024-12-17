@@ -45,6 +45,7 @@ def sectors(sec, rl):
 
 for file in range(1, 5):
     filename = "Autostrada/Tests/" + str(file) + ".in"
+    
     roadLength, sec = computeInput(filename)
     roadDamagedLength, roadDamagedSectors, roadSafeSectors = sectors(sec, roadLength)
     roadWear = round((roadDamagedLength * 100 / roadLength))
